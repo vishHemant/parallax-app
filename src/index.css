@@ -1,0 +1,334 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background: #1d002c;
+  font-family: sans-serif;
+  overflow-x: hidden;
+  color: var(--w);
+  line-height: 1.2;
+}
+
+:root {
+  --w: #fff;
+  --bg: #67ccff;
+  --bg1: #121137;
+  --indigo: #12f7ff;
+  --ld: #1d002c;
+  --blue: #194eb9;
+}
+
+::-webkit-scrollbar {
+  width: .5rem;
+  height: .1rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--blue);
+  border-radius: 5rem;
+  -webkit-border-radius: 5rem;
+  -moz-border-radius: 5rem;
+  -ms-border-radius: 5rem;
+  -o-border-radius: 5rem;
+}
+
+a,
+a:hover {
+  color: var(--w);
+  text-decoration: none;
+  box-shadow: none;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 10%;
+  z-index: 1001;
+}
+
+.logo a {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--indigo);
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+
+}
+
+header nav li a {
+  font-size: 1rem;
+  color: var(--w);
+  border: 2px solid var(--indigo);
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-weight: 500;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  font-weight: 500;
+  transition: all .3s ease;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  -o-transition: all .3s ease;
+}
+
+header nav li a:hover,
+header nav li a.active {
+  box-shadow: 0 0 1rem var(--indigo);
+  background: var(--indigo);
+  color: var(--ld);
+}
+
+section {
+  height: 100vh;
+}
+
+.parallax_home {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.parallax_home img {
+  position: absolute;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.parallax_home h1 {
+  position: absolute;
+  font-size: 3rem;
+  text-shadow: 0 0 10px rgb(0, 0, 0, 0.85);
+  top: 80%;
+  left: 10%;
+}
+
+.parallax_home img#moon,
+.about img#desert-moon {
+  mix-blend-mode: screen;
+}
+
+
+.about {
+  position: relative;
+}
+
+.about img {
+  position: absolute;
+  object-fit: cover;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.about img.waterfall {
+  position: absolute;
+  top: -95px;
+}
+
+.about .info_box {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 50%;
+  z-index: 1003;
+  background: var(--ld);
+  padding: 2rem 0 0;
+}
+
+.about .info_box h2 {
+  font-size: 2.5rem;
+}
+
+.about .info_box p {
+  margin: 1rem 0 2.5rem;
+}
+
+.btn {
+  background-color: var(--indigo);
+  color: var(--ld);
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  padding: .5rem 1.5rem;
+  transition: all .3s ease;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  border: 2px solid var(--indigo);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  box-shadow: 0 0 1rem var(--indigo);
+  background: var(--ld);
+  color: var(--indigo);
+}
+
+.products {
+  background: var(--bg1);
+  padding: 4rem 10%;
+  height: auto;
+  margin-top: 5rem;
+}
+
+.products h2 {
+  font-size: 2rem;
+  padding: 2rem 0 1rem;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.product_cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.card {
+  padding: 1rem;
+  border: 2px solid var(--indigo);
+  text-align: center;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  display: block;
+  z-index: 999;
+  transition: all 4s ease;
+  -webkit-transition: all .4s ease;
+  -moz-transition: all 4s ease;
+  -ms-transition: all 4s ease;
+  -o-transition: all 4s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  -o-transform: translateY(-10px);
+  box-shadow: 0 0 .5rem #1797ff;
+}
+
+.product_cards img {
+  width: 150px;
+  height: 150px;
+  margin-top: -4rem;
+  /*filter: drop-shadow(0 0 0.5rem #1797ff);
+  -webkit-filter: drop-shadow(0 0 0.5rem #1797ff);
+  */animation: fish 3s linear infinite alternate-reverse;
+  -webkit-animation: fish s linear infinite alternate-reverse;
+}
+
+
+@keyframes fish {
+  0% {
+      filter: drop-shadow(0 0 0.5rem transparent );
+      -webkit-filter: drop-shadow(0 0 0.5rem transparent );
+      transform: rotate(-10deg);
+      -webkit-transform: rotate(-10deg);
+      -moz-transform: rotate(-10deg);
+      -ms-transform: rotate(-10deg);
+      -o-transform: rotate(-10deg);
+}
+
+ 100% {
+      filter: drop-shadow(0 0 0.5rem #478eff);
+      -webkit-filter: drop-shadow(0 0 0.5rem #478eff);
+      transform: rotate(10deg);
+      -webkit-transform: rotate(10deg);
+      -moz-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      -o-transform: rotate(10deg);
+}
+}
+
+
+
+.card .price_name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2rem 0 0.4rem;
+}
+
+.info {
+  padding-bottom: .5rem;
+}
+
+.info p {
+  padding: .5rem 0 1.5rem;
+}
+
+.info .btn {
+  display: block;
+  width: 60%;
+  margin: auto;
+}
+
+.price_name span {
+  color: #04cf37;
+  font-weight: 500;
+}
+
+#progress {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: var(--blue);
+  display: none;
+  place-items: center;
+  border-radius: 50%;
+  /* color: var(--ld); */
+  fill: var(--ld);
+  font-weight: 500;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+#pro_value {
+  display: block;
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  background: var(--w);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
